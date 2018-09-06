@@ -22,7 +22,7 @@ An accessible voice activated switch using a HUZZAH32 – ESP32 Feather Board an
 
 3.	Setup IFTTT account
 
-  2.1. Create an IFTTT account at https://ifttt.com
+  3.1. Create an IFTTT account at https://ifttt.com
   
 4.	Create switch on recipe
 
