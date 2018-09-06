@@ -1,6 +1,8 @@
 # Alexa-VoiceSwitch
 An accessible voice activated switch using a HUZZAH32 – ESP32 Feather Board and an Amazon Echo
 
+[![A HUZZAH32 board connected to a wheelchair using a 3.5mm audio jack](https://img.youtube.com/vi/OCM7eB8Ey9I/0.jpg)](https://www.youtube.com/watch?v=OCM7eB8Ey9I)
+
 # Setup Instructions
 
   1. Setup an Adafruit IO account according to the following instructions:
