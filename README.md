@@ -19,7 +19,16 @@ An accessible voice activated switch using a HUZZAH32 – ESP32 Feather Board an
 2.	Setup your HUZZAH32 – ESP32 Feather Board
 
   2.1. Download ESP32 library for Arduino IDE and install it according to the following instruction: https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/using-with-arduino-ide
-
+  
+  2.2. Download Adafruit IO Arduino library and add it under Arduino's "libaries" directory.
+  https://github.com/adafruit/Adafruit_IO_Arduino
+  
+  2.3. Download Adafruit Arduino library for MQTT support and add it under Arduino's "libaries" directory.
+  https://github.com/adafruit/Adafruit_MQTT_Library
+  
+  2.4. Download Adafruit AArduino HTTP Client library and add it under Arduino's "libaries" directory.
+  https://github.com/arduino-libraries/ArduinoHttpClient
+  
 3.	Setup IFTTT account
 
   3.1. Create an IFTTT account at https://ifttt.com
