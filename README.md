@@ -75,7 +75,7 @@ An accessible voice activated switch using a HUZZAH32 – ESP32 Feather Board an
 
   6.2. Replace "your_ssid" with your WiFi's SSID and "your_pass" with your WiFi's password in the config.h file
 
-  6.3. Verify and upload Alexa-VoiceSwitch.ino code to your HUZZAH32 – ESP32 Feather Board
+  6.3. Verify and upload VoiceSwitch-Single.ino code to your HUZZAH32 – ESP32 Feather Board
 
 7.	Make sure the feed data status and status of your device match. You can manually set it to on/off to match it.
 
