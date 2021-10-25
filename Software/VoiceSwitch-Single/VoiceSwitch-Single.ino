@@ -8,11 +8,11 @@
 
 #include "config.h"
 
-AdafruitIO_Feed *counter = io.feed("Wheelchair");
+AdafruitIO_Feed *counter = io.feed("Switch");
 bool current = false;
 bool last = false;
 
-int switch_pin =13;
+int switch_pin = A2;
 
 void setup()
 {
