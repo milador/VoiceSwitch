@@ -8,7 +8,7 @@
 
 #include "config.h"
 
-AdafruitIO_Feed *counter = io.feed("Switch");
+AdafruitIO_Feed *counter = io.feed("Monkey");
 bool current = false;
 bool last = false;
 
