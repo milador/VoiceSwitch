@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////
 //
-//VoiceSwitch-Single.ino
+//VoiceSwitch.ino
 //
 //https://github.com/milador/VoiceSwitch
 //
@@ -8,18 +8,20 @@
 
 #include "config.h"
 
-AdafruitIO_Feed *counter = io.feed("Monkey");
-bool current = false;
-bool last = false;
+AdafruitIO_Feed *counter = io.feed(FEED_NAME);
 
-int switch_pin = A2;
+//bool current = false;
+//bool last = false;
+
+int switch_pin = A1;
+int reaction_delay = 50;
 
 void setup()
 {
   // start the serial connection
   Serial.begin(115200);
   pinMode(switch_pin, OUTPUT);
-  digitalWrite(switch_pin, HIGH); 
+  digitalWrite(switch_pin, LOW); 
   // wait for serial monitor to open
   while (!Serial);
   Serial.print("Connecting to Adafruit IO");
@@ -49,17 +51,6 @@ void loop()
   // io.run() keeps the client connected to
   // io.adafruit.com, and processes any incoming data.
   io.run();
-
-  //perform switch action
-    if(current == last)
-  {
-    digitalWrite(switch_pin, HIGH);
-  }
-  else{
-    digitalWrite(switch_pin, LOW);
-    delay(50);
-    last=current;
-  }
 }
 
 // handleMessage function is called whenever a 'counter' message is received from Adafruit IO.
@@ -70,14 +61,12 @@ void handleMessage(AdafruitIO_Data *data)
   Serial.println(s);
   
   //changing state of current variable based on value of feed 
-  if (s == "off")
+  if (s == "switch")
   {
-    current = false;
+    digitalWrite(switch_pin, HIGH);
+    delay(reaction_delay);
+    digitalWrite(switch_pin, LOW);
   }
-  if (s == "on")
-  {
-    current = true;
-    
-  }
+
 
 }
