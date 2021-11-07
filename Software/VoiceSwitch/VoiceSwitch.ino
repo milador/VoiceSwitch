@@ -22,8 +22,8 @@ void setup()
   Serial.begin(115200);
   pinMode(switch_pin, OUTPUT);
   digitalWrite(switch_pin, LOW); 
-  // wait for serial monitor to open
-  while (!Serial);
+
+  delay(2000);
   Serial.print("Connecting to Adafruit IO");
 
   // connect to io.adafruit.com
@@ -67,6 +67,13 @@ void handleMessage(AdafruitIO_Data *data)
     delay(reaction_delay);
     digitalWrite(switch_pin, LOW);
   }
-
+  else if (s == "on")
+  {
+    digitalWrite(switch_pin, HIGH);
+  }
+  else if (s == "off")
+  {
+    digitalWrite(switch_pin, LOW);
+  }
 
 }
